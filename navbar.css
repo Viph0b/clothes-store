@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "title_en";
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "title_kh";
+    src: url(Battambang-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.toppest_en .navigation_bar a {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: title_en;
+  font-weight: 600;
+}
+.toppest_kh .navigation_bar a {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: title_kh;
+  font-weight: 600;
+}
+
+.navigation_bar i{
+    font-size: 22pt;
+    color: aliceblue;
+}
+
+.navigation_bar .link_container a{
+    /* font-size: 14pt; */
+    font-size: 1.1rem;
+    color: aliceblue;
+}
+
+.toppest_en{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    /* background-color: #0C969C; */
+    background-color: #26415E;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+.toppest_kh{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    /* background-color: #0C969C; */
+    background-color: #26415E;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.top_box{
+    /* background: orange; */
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+.logo{
+    width: 18%;
+    height: auto;
+    /* background: pink; */
+    color: aliceblue;
+    padding: 5px 0px;
+}
+
+
+.navigation_bar{
+    /* background: blueviolet; */
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.link_container{
+    background-color: #26415E;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;    
+    padding: 5px 0px;
+}
+
+.lang_on_mobile{
+  display: none;
+}
+
+.lang_on_pc{
+  /* background-color: rebeccapurple; */
+  display: flex;
+}
+
+.navigation_bar .link_container a{
+    /* background-color: aqua; */
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* change background when hover */
+.navigation_bar > .link_container > a:hover, .navigation_bar .lang_on_pc a:hover{
+    background-color: #132436;
+    transition: 0.25s;
+}
+
+.navigation_bar .link_container a:active {
+  transform: scale(0.9);
+}
+
+#sidebar_active{
+    display: none;
+}
+
+.open_sidebar_button, .close_sidebar_button{
+    display: none;
+}
+
+
+
+@media(max-width: 1400px) {
+  .navigation_bar .link_container a {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+
+@media(max-width: 1000px){
+    .link_container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;   /*make the sidebar goes off screen*/
+        z-index: 10;
+        width: 40%;
+        transition: 0.5s;
+        padding: 0px 5px;
+    }
+
+    .navigation_bar .lang_on_mobile img{
+        padding: 0px 10px;
+    }
+
+    .lang_on_mobile{
+      display: block;
+    }
+
+    .lang_on_pc{
+      display: none;
+    }
+
+    .navigation_bar .link_container a{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        padding: 20px 30px;
+        justify-content: center;
+    }
+    
+    .open_sidebar_button{
+      padding: 0px 10px;
+      margin-bottom: 6px;
+    }
+
+    .close_sidebar_button{
+      padding: 15px;
+    }
+
+    .open_sidebar_button, .close_sidebar_button{
+        display: block;
+    }
+
+    #sidebar_active:checked ~ .link_container{
+        right: 0; /*make the sidebar goes back on screen when click*/
+        transition: 0.5s;
+    }
+
+    /*when click outside of the sidebar it wll close the sidebar as well*/
+    #sidebar_active:checked ~ #overlay{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9; /*make it below the sidebar*/
+    }
+}
+
+@media(max-width: 599px){
+    .logo img{
+        width: 100px;
+    }
+}
+
+@media(max-width: 320px){
+    .navigation_bar i{
+        font-size: 20pt;
+    }
+
+    .navigation_bar .link_container a{
+        font-size: 12pt;
+    }
+
+}
+
+

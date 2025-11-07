@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "title_en";
+  src: url(Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "para_en";
+  src: url(Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: "title_kh";
+  src: url(Battambang-Regular.ttf);
+}
+@font-face {
+  font-family: "para_kh";
+  src: url(KantumruyPro-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f6fa;
+}
+
+.containing_box_en p, .containing_box_en a, .containing_box_en button {
+  /* font-family: 'Inter', sans-serif; */
+  font-family: para_en;
+}
+
+.containing_box_en h1,
+.containing_box_en h2,
+.containing_box_en h3 {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: title_en;
+  font-weight: 600;
+}
+
+.containing_box_kh p,
+.containing_box_kh a,
+.containing_box_kh button {
+  /* font-family: "Kantumruy Pro", sans-serif;   */
+  font-family: para_kh;
+}
+
+.containing_box_kh h1,
+.containing_box_kh h2,
+.containing_box_kh h3 {
+  /* font-family: "Battambang", system-ui; */
+  font-family: title_kh;
+  font-weight: 600;
+}
+
+/* .containing_box_kh h3{
+    font-size: 1.2rem;
+}
+
+.containing_box_kh .item_card p{
+    font-size: 1.1rem;
+} */
+
+h1,
+h2 {
+  color: #26415e;
+  background: #e9f1fa;
+}
+
+.containing_box_en,
+.containing_box_kh {
+  background: #ffffff;
+  width: 90%;
+  height: auto;
+  padding: 5px 10px;
+  margin: auto;
+}
+
+/* main content */
+
+/* banner */
+.banner {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  margin: auto;
+  /* background-color: red; */
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* toc */
+h1 {
+  width: 100%;
+  font-size: 1.6rem;
+  /* background-color: blue; */
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  font-size: 1.6rem;
+  /* background: rgb(255, 121, 255); */
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+h2 img {
+  width: 30px;
+  height: auto;
+}
+
+.toc {
+  background: #e9f1fa;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* gap: 1em; */
+  row-gap: 0.2em;
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+.toc .item_type {
+  color: blue;
+  background: #ffffff;
+  width: 15%;
+  height: auto;
+  border: 1px solid #d0e2f0;
+  border-radius: 6px;
+  padding: 10px 0px;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.25s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.toc .item_type img {
+  width: 30px;
+  height: auto;
+  /* vertical-align: middle; */
+}
+
+.toc .item_type:hover,
+.toc .item_type:active {
+  color: #ffffff;
+  background: #26415e;
+}
+
+.toc .item_type:active {
+  box-shadow: #0078ff 0px 1px 4px, #0078ff 0px 0px 0px 3px;
+  transform: scale(0.9);
+}
+
+.toc .item_type_with_2 {
+  width: 40%;
+}
+
+.content {
+  /* background: rgb(255, 102, 0); */
+  /* background: transparent; */
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 1.6em;
+}
+
+.content .space {
+  width: 100%;
+}
+
+.item_card {
+  background: #e2f0ff;
+  width: 18%;
+  height: auto;
+  padding: 15px;
+  border-radius: 8px;
+  border: 5px solid #d8e9f8;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.item_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.item_card:active {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.item_img {
+  width: 100%;
+  /* background-color: red; */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* display: block; */
+}
+
+/* item name */
+.item_card h3 {
+  margin: 8px 0px 4px 0px;
+}
+
+/* price text */
+.item_card p {
+  font-size: 1rem;
+  color: #0078ff;
+  margin-bottom: 10px;
+  font-weight: 555;
+}
+
+.buy_button {
+  background-color: #26415e; /* Deep blue tone from your theme */
+  color: #ffffff; /* White text for contrast */
+  border: 2px solid #d0e2f0; /* Soft blue border for subtle outline */
+  border-radius: 6px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.buy_button:hover {
+  background-color: #0078ff; /* Accent blue on hover */
+  border-color: #0078ff;
+  transform: translate(-3px, -3px, -3px, -3px);
+  box-shadow: 0 6px 12px rgba(0, 120, 255, 0.35);
+}
+
+.buy_button:active {
+  transform: scale(0.9);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.discount {
+  font-family: title_en;
+  background-color: red;
+  color: #ffffff;
+  font-weight: bold;
+
+  padding: 5px 15px;
+  position: absolute;
+  border-radius: 7px;
+  top: 5px;
+  left: 5px;
+}
+
+#old_price {
+  text-decoration: line-through solid red;
+  font-size: 1rem;
+}
+
+#discount_price {
+  color: red;
+  font-size: 1rem;
+}
+
+/* up button */
+.up_button i {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: #0078ff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.25s;
+}
+
+.up_button i:active {
+  transform: scale(0.9);
+  transition: 0.25s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.648);
+}
+
+/* tablet */
+@media (max-width: 1111px) and (min-width: 600px) {
+  .toc {
+    row-gap: 0.5em;
+  }
+
+  .toc .item_type {
+    width: 40%;
+  }
+
+  .toc .last_element {
+    width: 87%;
+  }
+
+  .item_card {
+    width: 35%;
+  }
+
+  .up_button i {
+    padding: 5px;
+    font-size: 1.7rem;
+  }
+}
+
+/* phone */
+@media (max-width: 599px) {
+  .toc .item_type {
+    width: 90%;
+  }
+  .content {
+    justify-content: center;
+  }
+  .item_card {
+    width: 70%;
+  }
+
+  .buy_button {
+    padding: 6px 14px;
+    font-size: 1rem;
+  }
+
+  .up_button i {
+    right: 0.5rem;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+}
