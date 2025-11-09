@@ -314,7 +314,7 @@ h2 img {
 }
 
 /* tablet */
-@media (max-width: 1111px) and (min-width: 600px) {
+@media (max-width: 1111px) and (min-width: 601px) {
   .toc {
     row-gap: 0.5em;
   }
