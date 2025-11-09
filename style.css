@@ -338,7 +338,7 @@ h2 img {
 }
 
 /* phone */
-@media (max-width: 599px) {
+@media (max-width: 600px) {
   .toc .item_type {
     width: 90%;
   }
